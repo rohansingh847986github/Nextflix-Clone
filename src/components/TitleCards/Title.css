@@ -1,59 +1,125 @@
-.title-cards{
+.title-cards {
     margin-top: 50px;
     margin-bottom: 30px;
 }
-.title-cards h2{
-    margin-bottom: 8px;
-}
-.card-list{
-    display: flex;
-    gap: 10px;
-    overflow-x: scroll;
 
+.title-cards h2 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
 }
-.card-list img{
-    width: 240px;
-    border-radius: 4px;
-    cursor: pointer;
+
+/* Card List */
+.card-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    white-space: nowrap;
+    padding-bottom: 10px;
 }
-.card-list::-webkit-scrollbar{
+
+.card-list::-webkit-scrollbar {
     display: none;
 }
-.card-list .card{
+
+/* Individual Card */
+.card-list .card {
     position: relative;
-}
-.card-list .card p{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    flex: 0 0 auto;
     text-decoration: none;
     color: #fff;
 }
 
-@media (max-width:800px) {
-    .title-cards{
-        margin-top: 20px;
-        margin-bottom: 0;
+/* Card Image */
+.card-list .card img {
+    width: 240px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-list .card img:hover {
+    transform: scale(1.05);
+}
+
+/* Movie Title */
+.card-list .card p {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    white-space: normal;
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+    .title-cards {
+        margin-top: 25px;
+        margin-bottom: 15px;
     }
-    .title-cards h2{
+
+    .title-cards h2 {
         font-size: 20px;
     }
-    .card-list img{
-        width: 200px;
+
+    .card-list {
+        gap: 10px;
     }
-    .card-list p{
+
+    .card-list .card img {
+        width: 180px;
+    }
+
+    .card-list .card p {
         font-size: 12px;
     }
 }
 
-@media (max-width:500px) {
-    .title-cards h2{
-        font-size: 15px;
+/* Mobile */
+@media (max-width: 500px) {
+    .title-cards {
+        margin-top: 20px;
     }
-    .card-list img{
-        width: 165px;
+
+    .title-cards h2 {
+        font-size: 17px;
     }
-    .card-list p{
+
+    .card-list {
+        gap: 8px;
+    }
+
+    .card-list .card img {
+        width: 150px;
+    }
+
+    .card-list .card p {
+        font-size: 11px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 360px) {
+    .card-list .card img {
+        width: 130px;
+    }
+
+    .card-list .card p {
         font-size: 10px;
     }
 }

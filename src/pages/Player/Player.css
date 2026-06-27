@@ -1,21 +1,24 @@
-.player{
+.player {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.player img{
+
+.player img {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 50px;
     cursor: pointer;
 }
-.player iframe{
+
+.player iframe {
     border-radius: 10px;
 }
-.player-info{
+
+.player-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
